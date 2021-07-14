@@ -51,9 +51,9 @@ pipeline {
            }
        }
 
-        stage('Apply') {
+        stage('Destroy') {
             steps {
-                sh "pwd;cd terraform/aws-instance-first-script ; terraform apply -input=false tfplan"
+                sh "pwd;cd terraform/aws-instance-first-script ; terraform destroy -input=false tfplan"
             }
         }
     }
